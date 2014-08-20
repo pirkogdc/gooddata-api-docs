@@ -4198,7 +4198,7 @@ Note: notice the use of POST method instead of PUT - POST is the only one suppor
     
             {
                 "executionTask" : {
-                    "link" : {
+                    "links" : {
                         "poll" : "/gdc/projects/{project-id}/dataload/processes/{process-id}/executions/{execution-id}",
                         "detail" : "/gdc/projects/{project-id}/dataload/processes/{process-id}/executions/{execution-id}/detail"
                     }
@@ -5487,7 +5487,7 @@ API resource for retrieving the list of all available ADS instances.
                     "title" : "Storage",
                     "description" : "Testing Storage",
                     "status" : "ENABLED",
-                    "authorizationToken" : “token",
+                    "authorizationToken" : "token",
                     "created" : "2014-03-17T13:02:39.000Z",
                     "updated" : "2014-03-17T13:02:41.000Z",
                     "createdBy" : "/gdc/account/profile/{profile-id}",
@@ -5504,7 +5504,7 @@ API resource for retrieving the list of all available ADS instances.
                     "title" : "Salesforce",
                     "description" : "Test",
                     "status" : "ENABLED",
-                    "authorizationToken" : “token",
+                    "authorizationToken" : "token",
                     "created" : "2014-04-09T22:10:26.000Z",
                     "updated" : "2014-04-09T22:10:26.000Z",
                     "createdBy" : "/gdc/account/profile/{profile-id}",
@@ -5543,7 +5543,7 @@ Resource to create new ADS Instance. Use the following payload. You need to have
                     "authorizationToken": "Your-ADS-Token",
                     "description": "ADS Description"
                 }
-                }
+              }
 
 + Response 202 (application/json)
      
@@ -5553,13 +5553,13 @@ Resource to create new ADS Instance. Use the following payload. You need to have
 
      + Body
 
-                     {
+            {
               "asyncTask" : {
                 "links" : {
                   "poll" : "/gdc/dss/executions/{execution-id}"
-                    }
-                    }
-                    }
+                }
+              }
+            }
 
 
 ## GET /gdc/dss/instances/{instance-id}
@@ -5685,9 +5685,9 @@ Poll this resource to GET the ADS instance creation task detail
             {
                 "asyncTask": {
                             "links": {
-                                "dssInstance": "/gdc/dss/instances/{instance-id}”,
-                                “user”: “user URI”,
-                                “users”: “URI of users in DSS Instance"
+                                "dssInstance": "/gdc/dss/instances/{instance-id}",
+                                "user": "user URI",
+                                "users": "URI of users in DSS Instance"
                             }
                      }
               } 
